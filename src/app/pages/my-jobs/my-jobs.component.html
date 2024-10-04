@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-3">
+        <label for="">Name</label>
+        <input type="text" [(ngModel)]="categoryObj.CategoryName">
+    </div>
+    <div class="col-3">
+        <label for="">ImageUrl</label>
+        <input type="text" [(ngModel)]="categoryObj.ImageUrl">
+    </div>
+    <div class="col-3">
+        <label for="">Name</label>
+        <input type="checkbox" [(ngModel)]="categoryObj.IsActive">
+    </div>
+    <div class="col-3">
+     <button class="btn btn-success" (click)="onSave()">Save</button>
+    </div>
+</div>

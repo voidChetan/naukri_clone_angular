@@ -1,0 +1,92 @@
+<div class="container-fluid body-background">
+    <div class="container pt-5 ">
+        <div class="row">
+            <div class="col-8  job">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h6 style="margin-bottom: 0;">{{jobObj?.jobName}}
+                                                </h6>
+                                                <a>{{jobObj?.companyName}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 text-end">
+                                        <img class="compo_logo" [src]="jobObj.logoURL" alt="">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <i class="fa fa-suitcase" aria-hidden="true"></i> {{jobObj?.experience}}
+                                    </div>
+                                    <div class="col-4">
+                                        <i class="fa fa-inr" aria-hidden="true"></i>{{jobObj?.package}}
+                                    </div>
+                                    <div class="col-4">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>{{jobObj?.location}}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row pt-1">
+                                    <div class="col-3">
+                                        <small>Few Hours Ago</small>
+                                    </div>
+                                    <div class="col-2 text-end">
+                                        <i class="fa fa-bookmark" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-7 text-end" >
+                                        <button  *ngIf="isLoggedIn" (click)="apply()" class="btn btn-outline-primary round-button mx-2"
+                                            type="button">Apply</button>
+                                        <button *ngIf="!isLoggedIn" routerLink="/login" class="btn btn-primary round-button" type="button">Login To
+                                            Apply</button>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-3">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5>Job description</h5>
+                                <div class="p-2">
+                                        {{jobObj?.jobDescription}}
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 filter">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="text-center">Reviews</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-3">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="text-center">Salary Insights</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

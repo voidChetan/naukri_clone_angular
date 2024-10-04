@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col-12">
+        <table class="table">
+            <tr class="header-row">
+                <td>
+                    <div class="row">
+                        <div class="col">Sr No</div>
+                        <div class="col">Job title</div>
+                        <div class="col">Category</div>
+                        <div class="col">package</div>
+                        <div class="col">experience</div>
+                        <div class="col">location</div>
+                        <div class="col">Action</div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="table-row-not-expanded" *ngFor="let job of jobList;let sr= index">
+                <td class="cell" >
+                    <div class="row">
+                        <div class="col">{{sr+1}}</div>
+                        <div class="col">{{job.jobName}}</div>
+                        <div class="col">{{job.categoryName}}</div>
+                        <div class="col">{{job.package}}</div>
+                        <div class="col">{{job.experience}}</div>
+                        <div class="col">{{job.location}}</div>
+                        <div class="col">
+                            <button class="btn btn-success" (click)="openJobs(job)">Open</button>
+                        </div>
+                    </div>
+                    <div *ngIf="job.isExpanded" class="expanded-panel">
+                        <div class="table-container" style="    background: lightgray;">
+                            <div class="row">
+                                <div class="col">Sr No</div>
+                                <div class="col"> Status</div>
+                                <div class="col">EmailId</div>
+                                <div class="col">Full Name</div>
+                                <div class="col">Mobile No</div> 
+                            </div>
+                            <div class="row" *ngFor="let app of applications">
+                                <div class="col">{{sr+1}}</div>
+                                <div class="col">{{app.applcationStatus}}</div>
+                                <div class="col">{{app.emailId}}</div>
+                                <div class="col">{{app.fullName}}</div>
+                                <div class="col">{{app.mobileNo}}</div> 
+                                 
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
